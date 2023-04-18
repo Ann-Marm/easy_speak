@@ -5,19 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Speak - online-школа иностранных языков</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="scripts/script.js"defer></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="image/logo.svg" alt="Логотип компании Easy Speak">
-            <a href="tel:+79148748448">+7(914)874-84-48</a>
+    <header class="header">
+        <div class="container header__container">
+            <img class="header__logo" src="image/logo.svg" alt="Логотип компании Easy Speak">
+            <a class="header__phone" href="tel:+79148748448">+7(914)874-84-48</a>
         </div>
     </header>
     <main>
         <section class="hero">
-            <div class="container">
+            <div class="container hero__container">
                 <div class="hero__content">
-                    <h1 class="hero__title">Online-школа
+                    <h1 class="hero__title">
+                        <span class="hero__title-strong"> Online-школа </span>
                     <span class="hero__subtitle">иностранных языков</span>   
                     </h1>
                     <div class="hero__discription">
@@ -25,24 +31,61 @@
                         </p>
                         <p>Поможем преодолеть языковой барьер уже за&nbsp;3&nbsp;месяца обучения
                         </p>
-                    </div> 
-                    <button class="hero__button">Записаться на пробный урок</button>             
+                    </div>  
+                    <button class="hero__button main-button">Записаться на пробный урок</button>             
                     <ul class="hero__languages">
-                        <li class="hero__language">Английский</li>
-                        <li class="hero__language">Французский</li>
-                        <li class="hero__language">Китайский</li>
-                        <li class="hero__language">Испанский</li>
-                        <li class="hero__language">Итальянский</li>
-                        <li class="hero__language">Немецкий</li>
+                        <li class="hero__language hero__language_yellow">Английский</li>
+                        <li class="hero__language hero__language_blue">Французский</li>
+                        <li class="hero__language hero__language_red">Китайский</li>
+                        <li class="hero__language hero__language_pink">Испанский</li>
+                        <li class="hero__language hero__language_powder">Итальянский</li>
+                        <li class="hero__language hero__language_green">Немецкий</li>
                     </ul>
                 </div>
-
-                <div class="hero__girl">
+             
+                <!--
+                    <div class="hero__girl">
                     <img class="hero__girl-img" src="image/girl.png" alt="Девушка с ноутбуком улыбается">
                 </div>
+            -->
+            
             </div>
         </section>
     </main>
+
+    <div class="modal">
+        <div class="modal__body">
+                <h2 class="modal__title">Заполните форму и&nbsp;мы&nbsp;свяжемся с&nbsp;вами!</h2>
+                <p class="modal__description">Наш специалист перезвонит вам в&nbsp;течении 1 часа</p>  
+
+                <form class="modal__form form" action="">
+                <fieldset class="form__fieldset">
+                    <label for="" class="form__label">
+                        <span class="form__label-text">Имя</span>
+                        <input class="form__input" type="text"  name="name"> 
+                    </label>
+
+                    <label for="" class="form__label">
+                        <span class="form__label-text">Фамилия</span>
+                        <input class="form__input" type="text"  name="surname"> 
+                    </label>
+
+                    <label for="" class="form__label">
+                        <span class="form__label-text">Телефон</span>
+                        <input class="form__input" type="text"  name="phone"> 
+                    </label>
+                </fieldset> 
+                
+                <button class="main-button form__submit" type="submit">Записаться на&nbsp;пробный урок</button>
+                </form>
+
+                <button type="button" class="modal__close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" />
+                        </svg>               
+                </button>
+        </div>
+    </div>
     
 </body>
 </html>
